@@ -1,7 +1,7 @@
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from apalabrados import views as local_views
+from apalabrados import views as games_views
 from games import views as games_views
 
 urlpatterns = [

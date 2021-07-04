@@ -1,0 +1,1 @@
+web: gunicorn apalabrados.wsgi --log-file -
