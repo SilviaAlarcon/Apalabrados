@@ -2,8 +2,8 @@
 
 {% block container %}
 
-<table class="table mt-5">
-    <thead class="thead-dark">
+<table class="table mt-5 table-striped table-hover">
+    <thead class="table-dark">
         <tr>
         <th scope="col">#</th>
         <th scope="col">Special character</th>
@@ -18,7 +18,7 @@
         </tr>
         {% endfor %}
         {% else %}
-        <h1>No hay datos</h1>
+        <h3>No hay datos</h3>
         {% endif %}
     </tbody>
 </table>
