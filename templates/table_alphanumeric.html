@@ -1,0 +1,30 @@
+{% extends "home.html" %}
+
+{% block container %}
+
+<table class="table mt-5 table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Text</th>
+        <th scope="col">Initial letter</th>
+        <th scope="col">Final letter</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if alphanumeric %}
+        {% for alpha in alphanumeric %}
+        <tr>
+        <th scope="row">{{ alpha.id }}</th>
+        <td>{{ alpha.text }}</td>
+        <td>{{ alpha.initial_letter }}</td>
+        <td>{{ alpha.final_letter }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <h1>No hay datos</h1>
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

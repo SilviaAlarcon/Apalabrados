@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+
+{% block container %}
+
+<table class="table mt-5">
+    <thead class="thead-dark">
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Number</th>
+        <th scope="col">Accumulated</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if number %}
+        {% for num in number %}
+        <tr>
+        <th scope="row">{{ num.id }}</th>
+        <td>{{ num.number }}</td>
+        <td>{{ num.accumulated }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <h3>No hay datos</h3>
+
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

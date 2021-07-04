@@ -1,0 +1,26 @@
+{% extends "home.html" %}
+
+{% block container %}
+
+<table class="table mt-5">
+    <thead class="thead-dark">
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Special character</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if special_char %}
+        {% for sc in special_char %}
+        <tr>
+        <th scope="row">{{ sc.id }}</th>
+        <td>{{ sc.special_character}}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <h1>No hay datos</h1>
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock %}

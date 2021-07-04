@@ -1,0 +1,50 @@
+html, body{
+    background-color: #C5CAE9;
+    margin: 0%;
+}
+
+.title{
+    color:#673AB7;
+    margin-bottom: 1em;
+}
+
+.navbar{
+    background-color:#673AB7;
+    color: white;
+    padding-left: 4em;
+}
+
+.introduction{
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+.form-label{
+    font-size: 1.2em;
+}
+
+.btn{
+    background-color:#673AB7;
+    color: white;
+}
+
+a:link, a:visited, a:active{
+    text-decoration: none;
+    color:white;
+}
+
+.card-title{
+    color: #673AB7;
+}
+
+.card-text{
+    color: black;
+}
+
+.card-group{
+    margin-top:2em
+}
+
+.card{
+    margin: 1em;
+}
