@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'apalabrados.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-""" DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'apalabrados',
@@ -88,16 +88,16 @@ WSGI_APPLICATION = 'apalabrados.wsgi.application'
         'HOST': 'localhost',
         'PORT': ''
     }
-} """
+}
 
-import dj_database_url 
+""" import dj_database_url 
 from decouple import config
 
 DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
-}
+} """
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

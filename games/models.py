@@ -15,8 +15,8 @@ class Alphanumeric(models.Model):
 
 
 class Number(models.Model):
-    number = models.IntegerField(null=False)
-    accumulated = models.IntegerField(default=0)
+    number = models.IntegerField()
+    accumulated = models.IntegerField()
 
 
 class Special_char(models.Model):
