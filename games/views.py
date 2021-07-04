@@ -1,4 +1,7 @@
+#Django
 from django.shortcuts import render
+from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Count
 import re
 from django.db.models import Sum
 
@@ -9,7 +12,6 @@ def start_game(request):
     if request.method == 'POST':
         data = request.POST['data']
 
-        import re
         special_char = re.findall(r'[\W_]', data)
 
         if len(special_char) > 0:
@@ -17,10 +19,15 @@ def start_game(request):
             special_charac = Special_char.objects.create(special_character=convert_string)
             special_charac.save()
         elif data.isdigit():
-            accumulated_sum = Number.objects.all().aggregate(Sum('number'))
-            accumulated_value = accumulated_sum['number__sum'] + int(data)
-            number = Number.objects.create(number=data, accumulated=accumulated_value)
-            number.save()
+            if Number.objects.filter(pk=1).exists():
+                accumulated_sum = Number.objects.all().aggregate(Sum('number'))
+                accumulated_value = accumulated_sum['number__sum'] + int(data)
+                number = Number.objects.create(number=data, accumulated=accumulated_value)
+                number.save()
+            else:
+                accumulated_value = int(data)
+                number = Number.objects.create(number=data, accumulated=accumulated_value)
+                number.save()
         else:
             initial = "".join([word[0] for word in data.split()])
             final = "".join([word[-1] for word in data.split()])
